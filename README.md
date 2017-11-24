@@ -6,12 +6,12 @@
 
 ## Try it out!
 
-### 1. Clone the Storyblok Space
+### 1. Create a Clone of the Storyblok Space
 
-Press the URL below to directly build this shop
-in your own Storyblok space library.
+Press the URL below to directly build this Blog
+in your own Storyblok space list.
 
-[Press here for your own shop](https://app.storyblok.com/#!/build/41821)
+[Press here for your own blog](https://app.storyblok.com/#!/build/41821)
 
 <small>Make sure you're already registered, if not register and press the link again.</small>
 
