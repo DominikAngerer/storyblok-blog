@@ -1,0 +1,40 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $headline-color;
+  font-weight: 300;
+}
+
+h1, .h1 {
+  font-size: 2.65em;
+  line-height: 1.3em;
+  margin-bottom: 40px;
+}
+
+h2, .h2 {
+  font-size: 2.65em;
+  line-height: 1.3em;
+  margin-bottom: 22px;
+}
+
+h3, .h3 {
+  font-size: 2.2em;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+}
+
+h4, .h4 {
+  font-size: 1.9em;
+  margin-bottom: 18px;
+  line-height: 1.3em;
+}
+
+h5, .h5 {
+  font-size: 1.7em;
+  margin-bottom: 18px;
+  line-height: 1.3em;
+}
+ 
+h6, .h6 {
+  font-size: 1.6em;
+  margin-bottom: 18px;
+  line-height: 1.3em;
+}

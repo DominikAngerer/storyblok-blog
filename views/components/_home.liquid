@@ -1,0 +1,33 @@
+{{blok.editable}}
+<div class="home">
+
+  <!-- Here we are looping the body of the root component
+  and include every component in it -->
+  {% for item in blok.content %}
+    {% include item.component with blok: item %}
+  {% endfor %}
+
+  <!-- Load all content entries beginning with the path posts/ but ignore the startpage  -->
+
+  <section class="home__posts">
+
+    <h2 class="home__headline">Newest Posts</h2>
+
+    {% set postitems from stories starts_with: 'posts/', per_page: 2, is_startpage: false %}
+
+    <div class="grid">
+      
+    {% for post in postitems.data %}
+      {{post.content._editable}}
+      <div class="col-1-2">
+        <a href="/{{post.full_slug}}" class="post_card">
+          <img class="post_card__image" src="{{post.content.image | resize: '380x0'}}" alt="{{ post.content.title | default: post.name }}">
+          <h3 class="post_card__title">{{ post.content.title | default: post.name }}</h3>
+        </a>
+      </div>
+    {% endfor %}
+
+    </div>
+  </section>
+
+</div>

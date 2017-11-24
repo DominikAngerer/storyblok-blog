@@ -1,0 +1,95 @@
+.markdown {
+  color: $text-color;
+  font-weight: 300;
+
+  /*
+    Paragraphs in markdown
+  */
+  p {
+    font-size: 1.22em;
+    line-height: 1.9em;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  /*
+    Images in markdown
+  */
+  img {
+    max-width: 100%;
+  }
+
+  /*
+    List in markdown
+  */
+  ul, ol {
+    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+    line-height: 1.6;
+  }
+
+  ul ul, ol ol {
+    margin-bottom: 20px;
+  }
+
+  /*
+    List Item in markdown
+  */
+  li {
+    font-size: 1.1em;
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -0;
+      top: 15px;
+      width: 10px;
+      height: 2px;
+      background: $accent-color;
+
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+  }
+
+  /*
+    Tables in markdown
+  */
+  table {
+    background: $table-odd-background;
+    border: 0px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead tr {
+    background: $table-head-background-color;
+    color: $table-head-text-color;
+  }
+
+  td, th {
+    padding: 20px;
+    border: 0px;
+  }
+
+  tr:nth-child(even) {
+    background: $table-even-background;
+  }  
+
+
+  /*
+    iFrame in markdown
+  */
+
+  iframe {
+    max-width: 100%;
+    width: 100%;
+    height: 440px;
+  }
+}
+

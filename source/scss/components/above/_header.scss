@@ -1,0 +1,19 @@
+.header {
+  height: 140px;
+  background-color: $header-background-color;
+}
+
+.header__content {
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.logo {
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 200px;
+  max-height: 80px;
+}

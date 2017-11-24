@@ -1,0 +1,55 @@
+.post {
+  margin: 0 auto;
+  max-width: $post-max-width;
+}
+
+.post__back_container {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 15px;
+}
+
+.post__back {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $headline-color;
+}
+
+.post__title {
+  text-align: center;
+  font-size: 2.65em;
+  line-height: 1.3em;
+  font-weight: 100;
+  color: $headline-color;
+}
+
+.post__image {
+  max-width: 100%;
+}
+
+.post__time {
+  padding-top:20px;
+  text-align: center;
+  display: block;
+}
+
+.post_card {
+  display: block;
+  text-decoration: none;
+}
+
+.post_card__image {
+  max-width: 100%;
+}
+
+.post_card__title {
+  margin-top: 15px;
+  @extend .h6;
+}
+
+.random_posts {
+  margin-top: 120px;
+  background: #f9f9f9;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}

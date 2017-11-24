@@ -1,0 +1,6 @@
+@import '_variables.scss';
+@import 'components/above/*.scss';
+
+*, :after, :before {
+  box-sizing: border-box;
+}

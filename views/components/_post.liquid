@@ -1,0 +1,46 @@
+{{blok._editable}}
+<article class="post">
+
+  {% assign fullSlug = story.full_slug | split: '/' %}
+  {% assign folder_slug = '' %}
+  {% for fs in fullSlug %}
+    {% if forloop.last != true %}
+      {% assign folder_slug = folder_slug | append: fs | append: '/' %}
+    {% endif %}
+  {% endfor %}
+  
+  <div class="post__back_container">
+    <a class="post__back" href="/{{folder_slug}}">Back to overview</a>
+  </div>
+
+  <h1 class="post__title">{{ blok.title | default: story.name }}</h1>
+
+  <img class="post__image" src="{{blok.image | resize: '770x0'}}" alt="{{blok.title | default: story.name}}">
+
+  <time class="post__time" datetime="{{ story.created_at | default: story.published_at }}">{{story.created_at | default: story.published_at | date: "%B %d, %Y" }}</time>
+
+  <div class="post__content">
+    {% for item in blok.content %}
+      {% include item.component with blok: item %}
+    {% endfor %}
+  </div>
+
+</article>
+
+<section class="random_posts">
+
+  {% set postitems from stories starts_with: 'posts/', per_page: 3, is_startpage: false %}
+
+  <div class="grid">
+    
+  {% for post in postitems.data %}
+    <div class="col">
+      <a href="/{{post.full_slug}}" class="post_card">
+        <img class="post_card__image" src="{{post.content.image}}" alt="{{ post.content.title | default: post.name }}">
+        <h3 class="post_card__title">{{ post.content.title | default: post.name }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+
+  </div>
+</section>

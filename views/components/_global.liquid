@@ -1,0 +1,17 @@
+{{blok._editable}}
+<div class="global">
+  <div class="markdown" style="text-align: center;">
+    <h1>Press here to edit your global settings.</h1>
+    <p>The global component is not ment to be used as a content block.</p>
+    <p>It only provides data for you which you can read using a liquid function</p>
+    <pre>
+      {% raw %}
+        // loads the Story with the slug 'global'
+        {% set global from story id:'global' %}
+        
+        // you can access the global data like:
+        {{ global.content.your_key }}
+      {% endraw %}
+    </pre>
+  </div>
+</div>

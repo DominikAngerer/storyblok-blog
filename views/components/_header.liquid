@@ -1,0 +1,21 @@
+{{global.content._editable}}
+<header class="header">
+  <div class="header__content">
+    <div class="logo">
+      <a href="/">
+        <img style="max-width:230px" src="{{ global.content.logo | resize: '400x0'}}" alt="{{global.content.brand_name}}">
+      </a>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+
+        {% for navitem in global.content.navigation %}
+        <li>
+          <a href="{{navitem.link|url}}">{{navitem.text}}</a>
+        </li>
+        {% endfor %}
+        
+      </ul>
+    </nav>
+  </div>
+</header>
